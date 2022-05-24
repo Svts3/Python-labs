@@ -41,11 +41,11 @@ class Rect(Figure):
         super().__init__()
         self.side_length = side
         self.top_side_length = top_side
-        self.area = self.side*self.top_side
-        self.diagonal = math.sqrt(math.pow(self.side,2) + math.pow(self.top_side,2))
+        self.area = self.side_length*self.top_side_length
+        self.diagonal = math.sqrt(math.pow(self.side_length,2) + math.pow(self.top_side_length,2))
     
     def __str__(self):
-        return "side length: {}, top side length: {}, area: {}, diagonal: {:.1f}".format(self.side, self.top_side, self.area, self.diagonal)
+        return "side length: {}, top side length: {}, area: {}, diagonal: {:.1f}".format(self.side_length, self.top_side_length, self.area, self.diagonal)
     
 class Sphere(Figure):
     def __init__(self, x:float, y:float, z:float, radius:float) -> None:
@@ -63,8 +63,8 @@ class Parallelepiped(Rect):
     def __init__(self, side: float, top_side: float, height:float) -> None:
         super().__init__(side, top_side)
         self.height = height
-        self.area = 2 * (self.side * self.top_side + self.side * self.height + self.top_side * self.height)
-        self.diagonal = math.sqrt(math.pow(self.side, 2) + math.pow(self.top_side, 2) + math.pow(self.height, 2))
+        self.area = 2 * (self.side_length * self.top_side_length + self.side_length * self.height + self.top_side_length * self.height)
+        self.diagonal = math.sqrt(math.pow(self.side_length, 2) + math.pow(self.top_side_length, 2) + math.pow(self.height, 2))
     
     def __str__(self):
         return"{}, height: {}".format(super().__str__(), self.height)
