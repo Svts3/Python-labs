@@ -7,11 +7,16 @@ def main():
     circle = md.Circle(2.5,1.6,5)
     parallelepiped = md.Parallelepiped(20,25,8)
     rectangle = md.Rect(side=5,top_side=7)
-    list_of_figures = [sphere,segment,dot,circle,parallelepiped,rectangle]
+    list_of_figures = [sphere,
+                       segment,
+                       dot,
+                       circle,
+                       parallelepiped,
+                       rectangle]
     for i in list_of_figures:
-        
         print(i)
         print('\n')
 
 if __name__=="__main__":
     main()
+    
